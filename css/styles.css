@@ -1,198 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-header {
-    grid-area: header;
-    max-width: 1200px;
-    min-height: 120px;
-    background-color: #567BD1;
-    color: #fff;
-    padding: 20px;
-}
+        header {
+            grid-area: header;
+            max-width: 1200px;
+            min-height: 120px;
+            background-color: #567BD1;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        header img {
+            height: 60px;
+            width: 60px;
+            vertical-align: middle;
+        }
 
-main {
-    grid-area: main;
-    max-width: 1200px;
-    background-color: #6490F5; 
-    padding: 20px;
-}
+        header h1 {
+            font-size: 2.5em;
+            margin-left: 10px;
+        }
 
+        main {
+            grid-area: main;
+            max-width: 1200px;
+            min-height: 500px;
+            background-color: #4563A8;
+            color: #fff;
+            padding: 20px;
+        }
 
-aside {
-    grid-area: aside;
-    min-width: 200px;
-    min-height: 400px;
-    background-color: #4563A8; 
-    padding: 20px;
-}
+        h1 {
+            margin-top: 5px;
+        }
 
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
 
-#footer1 {
-    grid-area: footer1;
-    background-color: #344B80; 
-    color: #fff;
-    min-height: 80px;
-    text-align: center;
-    padding: 20px;
-}
+        p {
+            margin: 0;
+        }
 
+        aside {
+            grid-area: aside;
+            min-width: 200px;
+            min-height: 400px;
+            background-color: #6490F5;
+            color: #fff;
+            padding: 20px;
+        }
 
-#footer2 {
-    grid-area: footer2;
-    background-color: #243357; 
-    color: #fff;
-    min-height: 80px;
-    text-align: center;
-    padding: 20px;
-}
+        .important-links {
+            list-style: none;
+            padding: 0;
+        }
 
-header {
-    max-width: 1200px;
-    min-height: 120px;
-    background-color: #567BD1;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
+        .important-links li {
+            margin-bottom: 10px;
+        }
 
+        .important-links a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            transition: color 0.3s, border-color 0.3s;
+            border-bottom: 1px solid transparent;
+        }
 
-header img {
-    height: 60px;
-    width: 60px;
-    vertical-align: middle;
-}
+        .important-links a:hover {
+            color: #6490F5;
+            border-color: #6490F5;
+        }
 
+        footer {
+            grid-area: footer1;
+            background-color: #344B80;
+            color: #fff;
+            min-height: 80px;
+            text-align: center;
+            padding: 20px;
+        }
 
-header h1 {
-    font-size: 2.5em;
-    margin-left: 10px; 
-    display: inline;
-}
+        #footer2 {
+            grid-area: footer2;
+            background-color: #243357;
+            color: #fff;
+            min-height: 80px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .contact-info {
+            text-align: left;
+        }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    min-height: 80px;
-    background-color: #344B80;
-    color: #fff;
-    padding: 10px;
-}
+        .contact-info h3 {
+            font-size: 1.5em;
+        }
 
+        .disclaimer {
+            text-align: right;
+        }
 
-.contact-info {
-    text-align: left;
-}
+        .disclaimer p {
+            font-size: 0.9em;
+            color: #fff;
+        }
 
-.contact-info h3 {
-    font-size: 1.5em;
-}
+        @media screen and (max-width: 767px) {
+            header {
+                text-align: center;
+            }
 
-
-.disclaimer {
-    text-align: right;
-}
-
-.disclaimer p {
-    font-size: 0.9em;
-    color: #fff;
-}
-main {
-    padding: 10px;
-    background-color: #567BD1;
-    color: #fff;
-}
-
-main h1 {
-    margin-top: 5px;
-}
-
-.news-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-news-container img {
-    width: 50%; 
-    max-width: 400px;
-}
-
-image-description {
-    text-align: center;
-}
-
-news-container p {
-    width: 50%; 
-    margin: 0 5px; 
-}
-
-
-
-.subnews {
-    display: flex;
-    justify-content: space-between;
-}
-
-.subnews article {
-    background-color: #4563A8;
-    color: #fff;
-    padding: 10px;
-    width: calc(33.33% - 10px); 
-}
-
-.subnews article h2 {
-    font-size: 1.2em;
-}
-
-.subnews article p {
-    margin-top: 5px;
-}
-
-.subnews article a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-top: 10px;
-}
-aside {
-    padding: 10px;
-    background-color: #4563A8;
-    color: #fff;
-    border-bottom: 5px solid #344B80;
-}
-
-
-.aside-header {
-    text-align: center;
-}
-
-
-.rounded-box {
-    background-color: #6490F5;
-    color: #fff;
-    border-radius: 10px; 
-    padding: 10px;
-    text-align: center;
-}
-
-
-.important-links {
-    list-style: none;
-    padding: 0;
-}
-
-.important-links li {
-    margin-bottom: 10px;
-}
-
-.important-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s, border-color 0.3s; 
-    border-bottom: 1px solid transparent; 
-}
-
-.important-links a:hover {
-    color: #6490F5; 
-    border-color: #6490F5; 
-}
+            header img {
+                margin-right: 0;
+            }
+        }
+    </style>
+    <title>Estudiante de Previo Web</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo de la página" height="60" width="60">
+        <h1>Estudiante de Previo Web</h1>
+    </header>
+    <main>
+        <h1>Masacre Masiva en el Primer Previo de Web</h1>
+        <img src="img/desesperate.jpg" alt="Imagen de la noticia">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac mi vel ex volutpat cursus. Nulla facilisi.
+            Pellentesque tristique malesuada quam, nec tincidunt urna tempor quis. Proin eget nisl eu elit tristique gravida.
+            Suspendisse vel viverra sapien.
+        </p>
+        <section class="subnews">
+            <article>
+                <h2>Noticia 1: Incidente en el Campus</h2>
+                <p>Se reporta un incidente en el campus relacionado con notas malas y profesores estrictos.</p>
+                <a href="https://eduard1151456.github.io/cssTraining/">Leer más</a>
+            </article>
+            <article>
+                <h2>Noticia 2: Estudiante detenido</h2>
+                <p>Un estudiante es detenido por su participación en el incidente de notas malas.</p>
+                <a href="https://eduard1151456.github.io/cssTraining/">Leer más</a>
+            </article>
+            <article>
+                <h2>Noticia 3: Reacciones de los profesores</h2>
+                <p>Los profesores responden ante las quejas de los estudiantes sobre notas estrictas.</p>
+                <a href="https://eduard1151456.github.io/cssTraining/">Leer más</a>
+            </article>
+        </section>
+    </main>
+    <aside>
+        <div class="aside-header">
+            <div class="rounded-box">Enlaces Importantes</div>
+        </div>
+        <ul class="important-links">
+            <li><a href="#">Primera Noticia</a></li>
+            <li><a href="#">Segunda Noticia</a></li>
+            <li><a href="#">Tercera Noticia</a></li>
+            <li><a href="#">Cuarta Noticia</a></li>
+            <li><a href="#">Quinta Noticia</a></li>
+        </ul>
+    </aside>
+    <footer>
+        <div class="contact-info">
+            <h3>Contactanos</h3>
+            <p><strong>Dirección:</strong> Calle Falsa 123, Springfield</p>
+            <p><strong>Email:</strong> homero@family.com</p>
+            <p><strong>Teléfono:</strong> 123 456 78 90</p>
+        </div>
+        <div class="disclaimer">
+            <p>Esta página web es un proyecto del estudiante para la asignatura de Desarrollo Web. Aquí se muestra contenido relacionado con el desarrollo web y se incluye información ficticia para fines educativos.</p>
+        </div>
+    </footer>
+    <footer id="footer2">
+        <p>Este es el pie de página derecho. Aquí puedes agregar información adicional relacionada con tu sitio web o proyecto.</p>
+    </footer>
+</body>
+</html>
