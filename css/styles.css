@@ -1,0 +1,47 @@
+
+header {
+    grid-area: header;
+    max-width: 1200px;
+    min-height: 120px;
+    background-color: #567BD1;
+    color: #fff;
+    padding: 20px;
+}
+
+
+main {
+    grid-area: main;
+    max-width: 1200px;
+    background-color: #6490F5; 
+    padding: 20px;
+}
+
+
+aside {
+    grid-area: aside;
+    min-width: 200px;
+    min-height: 400px;
+    background-color: #4563A8; 
+    padding: 20px;
+}
+
+
+#footer1 {
+    grid-area: footer1;
+    background-color: #344B80; 
+    color: #fff;
+    min-height: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#footer2 {
+    grid-area: footer2;
+    background-color: #243357; 
+    color: #fff;
+    min-height: 80px;
+    text-align: center;
+    padding: 20px;
+}
+
